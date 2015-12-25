@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <title>Test Platform</title>
+    </head>
+    <body>
+        <center><h1>Test Platform</h1></center>
+        <hr/>
+        <div>
+            <label for="siteUrl">Url with apiKey</label>
+            <input type="text" id="siteUrl" style="width: 60%"/>
+            <button onclick="showAd()">Apply</button>
+        </div>
+        <hr/>
+
+        <div id="banner"></div>
+
+        <script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+        <script type="text/javascript">
+            var container = $('#banner');
+            var urlInput = $('#siteUrl');
+            var getContent = function (url) {
+                $.get(url, function(data) {
+                    container.html(data || '<h3>no data to show</h3>');
+                })
+                .fail(function(err) {
+                    console.log(err)
+                    container.html('<h3>error</h3>');
+                });
+            };
+            var showAd = function () {
+                getContent(urlInput.val());
+            }
+        </script>
+    </body>
+</html>

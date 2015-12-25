@@ -1,0 +1,19 @@
+{
+  "name": "test_platform",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/igbasov/testPlatform.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/igbasov/testPlatform/issues"
+  },
+  "homepage": "https://github.com/igbasov/testPlatform#readme"
+}
